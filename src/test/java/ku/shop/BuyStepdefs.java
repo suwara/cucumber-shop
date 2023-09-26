@@ -1,5 +1,6 @@
 package ku.shop;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,6 +32,13 @@ public class BuyStepdefs {
     @Then("total should be {float}")
     public void total_should_be(double total) {
         assertEquals(total, order.getTotal());
+    }
+
+
+    @And("total of {string} in stock is {int}")
+    public void total_of_in_stockIs(String name, int stock) {
+        Product prod = catalog.getProduct(name);
+        assertEquals(stock, prod.getStock());
     }
 }
 
