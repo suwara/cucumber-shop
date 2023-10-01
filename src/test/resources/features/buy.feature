@@ -1,6 +1,7 @@
 Feature: Buy products
     As a customer
     I want to buy products
+    suwara apaipong 6010405572
 
 Background:
     Given the store is ready to service customers
